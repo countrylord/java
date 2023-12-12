@@ -40,11 +40,11 @@ spec:
             spec:
               description: ZPPCDomainNodeSpec defines the desired state of ZPPCDomainNode
               properties:
-                caconfigmap:
+                caConfigmap:
                   description: CaConfigMap is name of configmap which save ca cert of
                     domain
                   type: string
-                clientsecret:
+                clientSecret:
                   description: ClientSecret is name of secret which save client key
                     of envoy
                   type: string
@@ -68,15 +68,15 @@ spec:
                 locationType:
                   description: LocationType shows whether domainNode is in the k8s cluster
                   type: string
-                serversecret:
+                serverSecret:
                   description: Serversecret is name of secret from app which save server
                     cert and key of envoy
                   type: string
               required:
-                - caconfigmap
-                - clientsecret
+                - caConfigmap
+                - clientSecret
                 - locationType
-                - serversecret
+                - serverSecret
               type: object
             status:
               description: ZPPCDomainNodeStatus defines the observed state of ZPPCDomainNode
