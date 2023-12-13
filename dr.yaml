@@ -11,6 +11,8 @@ spec:
     kind: ZPPCDomainRoute
     listKind: ZPPCDomainRouteList
     plural: zppcdomainroutes
+    shortNames:
+    - zdr
     singular: zppcdomainroute
   scope: Cluster
   versions:
@@ -58,6 +60,11 @@ spec:
                     type: string
                   tlsCA:
                     type: string
+                type: object
+              requestHeadersToAdd:
+                additionalProperties:
+                  type: string
+                description: add specified headers to requests from source.
                 type: object
               source:
                 description: namespace of the source institution
