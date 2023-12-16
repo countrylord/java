@@ -43,13 +43,16 @@ spec:
                 additionalProperties:
                   type: string
                 type: object
+              endpoints:
+                items:
+                  type: string
+                type: array
               infoKey:
                 type: string
               type:
                 type: string
-              uri:
-                type: string
             required:
+            - endpoints
             - type
             type: object
         type: object
